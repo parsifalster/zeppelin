@@ -26,7 +26,7 @@ limitations under the License.
               class="btn btn-default btn-xs"
               ng-click="runAllParagraphs(note.id)"
               ng-class="{'disabled':isNoteRunning()}"
-              tooltip-placement="bottom" tooltip="Run all paragraphs"
+              tooltip-placement="bottom" tooltip="运行所有段落"
               ng-disabled="revisionView">
         <i class="icon-control-play"></i>
       </button>
@@ -34,14 +34,14 @@ limitations under the License.
               class="btn btn-default btn-xs"
               ng-click="toggleAllEditor()"
               ng-hide="viewOnly"
-              tooltip-placement="bottom" tooltip="Show/hide the code"
+              tooltip-placement="bottom" tooltip="显示/隐藏 代码"
               ng-disabled="revisionView">
         <i ng-class="editorToggled ?  'fa icon-size-fullscreen' :'fa icon-size-actual'"></i></button>
       <button type="button"
               class="btn btn-default btn-xs"
               ng-click="toggleAllTable()"
               ng-hide="viewOnly"
-              tooltip-placement="bottom" tooltip="Show/hide the output"
+              tooltip-placement="bottom" tooltip="显示/隐藏 输出"
               ng-disabled="revisionView">
         <i ng-class="tableToggled ? 'fa icon-notebook' : 'fa icon-book-open'"></i>
       </button>
@@ -50,7 +50,7 @@ limitations under the License.
               ng-click="clearAllParagraphOutput(note.id)"
               ng-hide="viewOnly"
               ng-class="{'disabled':isNoteRunning()}"
-              tooltip-placement="bottom" tooltip="Clear output"
+              tooltip-placement="bottom" tooltip="清除 输出"
               ng-disabled="revisionView">
         <i class="fa fa-eraser"></i>
       </button>
@@ -58,7 +58,7 @@ limitations under the License.
       <button type="button"
               class="btn btn-default btn-xs"
               ng-hide="viewOnly"
-              tooltip-placement="bottom" tooltip="Clone this note" data-source-note-name="{{note.name}}"
+              tooltip-placement="bottom" tooltip="拷贝笔记" data-source-note-name="{{note.name}}"
               data-toggle="modal" data-target="#noteNameModal" data-clone="true"
               ng-disabled="revisionView">
         <i class="fa fa-copy"></i>
@@ -67,7 +67,7 @@ limitations under the License.
               class="btn btn-default btn-xs"
               ng-hide="viewOnly"
               ng-click="exportNote()"
-              tooltip-placement="bottom" tooltip="Export this note"
+              tooltip-placement="bottom" tooltip="导出 笔记"
               ng-disabled="revisionView">
         <i class="fa fa-download"></i>
       </button>
@@ -77,7 +77,7 @@ limitations under the License.
               ng-if="ticket.principal && ticket.principal !== 'anonymous'"
               ng-hide="viewOnly || note.config.personalizedMode !== 'true'"
               ng-click="toggleNotePersonalizedMode()"
-              tooltip-placement="bottom" tooltip="Switch to collaboration mode {{isOwner ? '' : '(owner can change)'}}"
+              tooltip-placement="bottom" tooltip="切换到协同模式 {{isOwner ? '' : '(拥有者能够切换)'}}"
               ng-disabled="revisionView">
         <i class="fa fa-user"></i>
       </button>
@@ -86,7 +86,7 @@ limitations under the License.
               ng-if="ticket.principal && ticket.principal !== 'anonymous'"
               ng-hide="viewOnly || note.config.personalizedMode === 'true'"
               ng-click="toggleNotePersonalizedMode()"
-              tooltip-placement="bottom" tooltip="Switch to personal mode {{isOwner ? '' : '(owner can change)'}}"
+              tooltip-placement="bottom" tooltip="切换到个人模式 {{isOwner ? '' : '(拥有者能够切换)'}}"
               ng-disabled="revisionView">
         <i class="fa fa-users"></i>
       </button>
@@ -99,7 +99,7 @@ limitations under the License.
                 id="versionControlDropdown"
                 ng-hide="viewOnly"
                 data-toggle="dropdown"
-                tooltip-placement="bottom" tooltip="Version control"
+                tooltip-placement="bottom" tooltip="版本控制"
                 ng-disabled="revisionView">
           <i class="fa fa-file-code-o"></i>
         </button>
@@ -109,7 +109,7 @@ limitations under the License.
                 ng-hide="viewOnly"
                 ng-click="setNoteRevision()"
                 ng-disabled="!revisionView"
-                tooltip-placement="bottom" tooltip="Set revision">
+                tooltip-placement="bottom" tooltip="设置修订">
           <i class="fa fa-arrow-circle-o-right"></i>
         </button>
         <ul class="dropdown-menu" style="width:250px"
@@ -128,7 +128,7 @@ limitations under the License.
                         ng-hide="viewOnly"
                         ng-click="checkpointNote(note.checkpoint.message)"
                         style="margin-left: 4px;"
-                        tooltip-placement="bottom" tooltip="Commit this note">Commit
+                        tooltip-placement="bottom" tooltip="提交笔记">提交
                 </button>
               </div>
             </div>
@@ -167,7 +167,7 @@ limitations under the License.
                 class="btn btn-default btn-xs"
                 ng-click="removeNote(note.id)"
                 ng-hide="viewOnly"
-                tooltip-placement="bottom" tooltip="Remove this note permanently"
+                tooltip-placement="bottom" tooltip="永久删除笔记"
                 ng-disabled="revisionView">
           <i class="icon-trash"></i>
         </button>
@@ -177,7 +177,7 @@ limitations under the License.
                 class="btn btn-default btn-xs"
                 ng-click="moveNoteToTrash(note.id)"
                 ng-hide="viewOnly"
-                tooltip-placement="bottom" tooltip="Move this note to trash"
+                tooltip-placement="bottom" tooltip="将笔记丢到垃圾箱"
                 ng-disabled="revisionView">
           <i class="icon-trash"></i>
         </button>
@@ -189,24 +189,24 @@ limitations under the License.
              type="button"
              data-toggle="dropdown"
              ng-class="{ 'btn-info' : note.config.cron, 'btn-danger' : note.info.cron, 'btn-default' : !note.config.cron}"
-             tooltip-placement="bottom" tooltip="Run scheduler"
+             tooltip-placement="bottom" tooltip="运行调度器"
              ng-disabled="revisionView">
           <span class="fa fa-clock-o"></span> {{getCronOptionNameFromValue(note.config.cron)}}
         </div>
         <ul class="dropdown-menu" role="menu" style="width:300px">
           <li>
             <div class="cron-preset-container">
-              Run note with cron scheduler.
-              Either choose from preset or write your own <a href="http://www.quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/crontrigger" target="_blank">cron expression</a>.
+              定时运行笔记.
+              可以从预先设置的调度器中选择，或者编写新的调度器 <a href="http://www.quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/crontrigger" target="_blank">定时表达式</a>.
               <div>
-                <span>- Preset</span>
+                <span>- 预设置</span>
                 <a class="cron-preset" ng-repeat="cr in cronOption"
                    type="button"
                    ng-click="setCronScheduler(cr.value)"
                    dropdown-input ng-class="{ 'selected' : cr.value == note.config.cron}">{{cr.name}}</a>
               </div>
               <div>
-                <span>- Cron expression</span>
+                <span>- 定时表达式</span>
                 <input type="text"
                        ng-model="note.config.cron"
                        ng-change="setCronScheduler(note.config.cron)"
@@ -216,14 +216,14 @@ limitations under the License.
                 </p>
               </div>
               <div>
-                <span>- Cron executing user (click enter in field to submit)</span>
+                <span>-定时执行用户 (在输入框中点击enter就可以提交)</span>
                 <input type="text"
                        ng-model="note.config.cronExecutingUser"
                        ng-enter="setCronExecutingUser(note.config.cronExecutingUser)"
                        dropdown-input />
               </div>
               <div>
-                <span>- auto-restart interpreter on cron execution </span>
+                <span>- 根据定时表达式，自动重启动解析器 </span>
                 <input type="checkbox"
                        ng-model="note.config.releaseresource"
                        ng-click="setReleaseResource(note.config.releaseresource)"/>
@@ -242,19 +242,19 @@ limitations under the License.
               type="button"
               data-toggle="modal"
               data-target="#shortcutModal"
-              tooltip-placement="bottom" tooltip="List of shortcut">
+              tooltip-placement="bottom" tooltip="快捷列表">
           <i class="fa fa-keyboard-o"></i>
         </span>
         <span class="setting-btn"
               type="button"
               ng-click="toggleSetting()"
-              tooltip-placement="bottom" tooltip="Interpreter binding">
+              tooltip-placement="bottom" tooltip="解析器绑定">
           <i class="fa fa-cog" ng-style="{color: showSetting ? '#3071A9' : 'black' }"></i>
         </span>
         <span class="setting-btn"
               type="button"
               ng-click="togglePermissions()"
-              tooltip-placement="bottom" tooltip="Note permissions">
+              tooltip-placement="bottom" tooltip="笔记权限">
           <i class="fa fa-lock" ng-style="{color: showPermissions ? '#3071A9' : 'black' }"></i>
         </span>
       </span>

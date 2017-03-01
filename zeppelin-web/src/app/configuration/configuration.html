@@ -16,14 +16,14 @@ limitations under the License.
     <div class="row">
       <div class="col-md-12">
         <h3 class="new_h3">
-          Configurations
+          平台配置
         </h3>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        Shows current configurations for Zeppelin Server.<br/>
-        Note: For security reasons, some key/value pairs including passwords would not be shown.
+        显示当前的配置.<br/>
+        注意: 出于安全考虑，包含密码信息的键值对不显示.
       </div>
     </div>
   </div>
@@ -36,8 +36,8 @@ limitations under the License.
         <table class="table table-striped">
           <thead>
           <tr>
-            <th style="width:30%">name</th>
-            <th>value</th>
+            <th style="width:30%">名称</th>
+            <th>取值</th>
           </tr>
           </thead>
           <tr ng-repeat="key in configurations | sortByKey" >

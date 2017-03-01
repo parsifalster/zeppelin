@@ -22,7 +22,7 @@ limitations under the License.
     </div>
     <div ng-show="visualizationOrder.length > 1"
          class="row heliumVisualizationOrder">
-      <div style="margin:0 0 5px 15px">Visualization package display order (drag and drop to reorder)</div>
+      <div style="margin:0 0 5px 15px">可视化包显示顺序 (拖拽可重新排序)</div>
       <div class="col-md-12 sortable-row btn-group"
            as-sortable="visualizationOrderListeners"
            data-ng-model="visualizationOrder">
@@ -54,11 +54,11 @@ limitations under the License.
         <div ng-show="!pkgInfo.enabled"
              ng-click="enable(pkgName, pkgInfo.pkg.artifact)"
              class="btn btn-success btn-xs"
-             style="float:right">Enable</div>
+             style="float:right">使能</div>
         <div ng-show="pkgInfo.enabled"
              ng-click="disable(pkgName)"
              class="btn btn-info btn-xs"
-             style="float:right">Disable</div>
+             style="float:right">禁用</div>
       </div>
       <div ng-class="{heliumPackageDisabledArtifact: !pkgInfo.enabled, heliumPackageEnabledArtifact: pkgInfo.enabled}">
         {{pkgInfo.pkg.artifact}}

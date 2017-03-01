@@ -11,7 +11,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-All fields:
+所有域:
 <div class="allFields row">
   <ul class="noDot">
     <li class="liVertical" ng-repeat="col in tableDataColumns">
@@ -44,7 +44,7 @@ All fields:
   </div>
   <div class="col-md-4">
     <span class="columns lightBold">
-      Groups
+      组
       <ul data-drop="true"
           ng-model="config.groups"
           jqyoui-droppable="{multiple:true, onDrop:'save()'}"
@@ -59,7 +59,7 @@ All fields:
   </div>
   <div class="col-md-4">
     <span class="columns lightBold">
-      Values
+      取值
       <ul data-drop="true"
           ng-model="config.values"
           jqyoui-droppable="{multiple:true, onDrop:'save()'}"
@@ -74,11 +74,11 @@ All fields:
               <span class="fa fa-close" ng-click="removeValue($index)"></span>
             </div>
             <ul class="dropdown-menu" role="menu">
-              <li ng-click="setValueAggr($index, 'sum')"><a>sum</a></li>
-              <li ng-click="setValueAggr($index, 'count')"><a>count</a></li>
-              <li ng-click="setValueAggr($index, 'avg')"><a>avg</a></li>
-              <li ng-click="setValueAggr($index, 'min')"><a>min</a></li>
-              <li ng-click="setValueAggr($index, 'max')"><a>max</a></li>
+              <li ng-click="setValueAggr($index, 'sum')"><a>汇总</a></li>
+              <li ng-click="setValueAggr($index, 'count')"><a>计数</a></li>
+              <li ng-click="setValueAggr($index, 'avg')"><a>平均</a></li>
+              <li ng-click="setValueAggr($index, 'min')"><a>最小</a></li>
+              <li ng-click="setValueAggr($index, 'max')"><a>最大</a></li>
             </ul>
           </div>
         </li>

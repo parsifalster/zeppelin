@@ -18,10 +18,10 @@ limitations under the License.
     </div>
     <div style="margin-top: -380px;">
       <h1 class="box-heading" id="welcome">
-        Welcome to Zeppelin!
+        欢迎使用DeepChain!
       </h1>
-      Zeppelin is web-based notebook that enables interactive data analytics.<br/>
-      You can make beautiful data-driven, interactive, collaborative document with SQL, code and even more!<br/>
+      DeepChain是链数据交互分析平台.<br/>
+      DeepChain整合第三方API，聚合相关数据，为您制作数据驱动的，交互式，协同的去中心数字货币行业分析报告，提供简单有趣的平台!<br/>
 
       <div class="row">
         <div class="col-md-4" ng-if="ticket">
@@ -35,9 +35,9 @@ limitations under the License.
 
           <div>
             <h5><a href="" data-toggle="modal" data-target="#noteImportModal" style="text-decoration: none;">
-              <i style="font-size: 15px;" class="fa fa-upload"></i> Import note</a></h5>
+              <i style="font-size: 15px;" class="fa fa-upload"></i> 导入笔记</a></h5>
             <h5 ng-controller="NotenameCtrl as notenamectrl"><a href="" data-toggle="modal" data-target="#noteNameModal" style="text-decoration: none;" ng-click="notenamectrl.getInterpreterSettings()">
-              <i style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
+              <i style="font-size: 15px;" class="icon-notebook"></i> 创建笔记</a></h5>
             <ul id="notebook-names">
               <li class="filter-names" ng-include="'components/filterNoteNames/filter-note-names.html'"></li>
               <li ng-repeat="note in home.notes.list | filter:query.q | orderBy:home.arrayOrderingSrv.noteListOrdering track by $index">
@@ -56,19 +56,18 @@ limitations under the License.
           </div>
         </div>
         <div class="col-md-6">
-          <h4>Help</h4>
-          Get started with <a style="text-decoration: none;" target="_blank"
-                              href="http://zeppelin.apache.org/docs/{{zeppelinVersion}}/index.html">Zeppelin documentation</a><br/>
+          <h4>帮助</h4>
+          快速入门， <a style="text-decoration: none;" target="_blank"
+                              href="http://zeppelin.apache.org/docs/{{zeppelinVersion}}/index.html">DeepChain 文档</a><br/>
 
-          <h4>Community</h4>
-          Please feel free to help us to improve Zeppelin, <br/>
-          Any contribution are welcome!<br/><br/>
+          <h4>社区</h4>
+          非常欢迎你加入社区，提出需求!<br/><br/>
           <a style="text-decoration: none;" href="http://zeppelin.apache.org/community.html"
-             target="_blank"><i style="font-size: 15px;" class="fa fa-users"></i> Mailing list</a><br/>
+             target="_blank"><i style="font-size: 15px;" class="fa fa-users"></i> 邮件列表</a><br/>
           <a style="text-decoration: none;" href="https://issues.apache.org/jira/browse/ZEPPELIN"
-             target="_blank"><i style="font-size: 15px;" class="fa fa-bug"></i> Issues tracking</a><br/>
+             target="_blank"><i style="font-size: 15px;" class="fa fa-bug"></i> 问题跟踪</a><br/>
           <a style="text-decoration: none;" href="https://github.com/apache/zeppelin"
-             target="_blank"><i style="font-size: 20px;" class="fa fa-github"></i> Github</a>
+             target="_blank"><i style="font-size: 20px;" class="fa fa-github"></i> 源码</a>
         </div>
       </div>
     </div>
